@@ -57,6 +57,9 @@ class Application {
         // Initialize audio
         AudioManager.init();
         
+        // Initialize stats tracker (real online numbers)
+        StatsTracker.init();
+        
         // Initialize achievement system
         AchievementSystem.init();
         
@@ -68,6 +71,9 @@ class Application {
         
         // Initialize profile
         Profile.init();
+        
+        // Initialize game engine
+        window.GameEngine = new GameCore();
         
         // Update global stats
         this.updateGlobalStats();
